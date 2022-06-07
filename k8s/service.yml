@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: v2ray
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  type: ClusterIP  
+  ports:
+  - name: "v2ray"
+    port: 8080
+  selector:
+    app: v2ray
